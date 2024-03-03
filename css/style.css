@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inria Serif", serif;
+  color: rgb(19, 18, 18);
+
+  display: grid;
+  justify-content: center;
+}
+
+.kontainer {
+  width: 100rem;
+  text-align: center;
+}
+
+.bagian-profil {
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(211, 236, 236);
+  margin-bottom: 40rem;
+}
+
+.profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+.profil h1 {
+  font-size: 4rem;
+  font-size: 400;
+}
+
+.profil img {
+  height: 30rem;
+}
+
+.bagian-tentang {
+}
+
+.bagian-tentang h1 {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.tentang {
+  background-color: rgb(29, 31, 31);
+  height: 30rem;
+}
+
+.tentang p,
+.tentang ul {
+  text-align: left;
+  color: aqua;
+  font-size: 3rem;
+}
+
+.tentang ul {
+  margin: 4rem;
+}
