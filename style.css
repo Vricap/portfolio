@@ -1,0 +1,160 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inria Serif", serif;
+  color: rgb(19, 18, 18);
+} */
+
+/* Resetting some default styles */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+header, section, footer {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.projects-list {
+  padding-left: 20px;
+  list-style: none;
+}
+
+.projects-list > li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-overview {
+  margin: 5px 0 20px; /* Adjust as needed */
+}
+
+.details-btn {
+  background-color: transparent;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-size: 1em; /* Adjust size as needed */
+  padding: 0;
+  margin-left: 10px; /* Space out the arrow from the title */
+}
+
+.project-details {
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #007bff;
+  border-radius: 5px;
+}
+
+#skills {
+  margin: 40px 0;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto; /* Center the list with auto margins */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 960px; /* You might adjust this based on your layout's max width */
+}
+
+.skill-list li {
+  background-color: #f2f2f2;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.skill-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Adjust the color as needed */
+}
+
+footer > .link {
+  color: #333; /* Icon color */
+  margin: 0 10px;
+  font-size: 24px; /* Adjust icon size as needed */
+  transition: color 0.3s ease;
+}
+
+footer .link:hover {
+  color: #007bff; /* Icon hover color */
+}
