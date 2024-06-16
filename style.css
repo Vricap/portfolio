@@ -52,6 +52,7 @@ section h2 {
 .projects-list > li {
   margin-bottom: 10px;
   list-style: none;
+  background-color: #f2f2f2;
 }
 
 a {
