@@ -101,6 +101,7 @@ nav div {
 
 .project-card p {
     margin-bottom: 0;
+    text-align: justify;
 }
 
 footer {
