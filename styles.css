@@ -31,9 +31,9 @@ nav a {
 }
 
 nav div {
-	text-align: end;
-	margin-top: -1.5rem;
-	margin-right: 4rem;
+    text-align: end;
+    margin-top: -1.5rem;
+    margin-right: 4rem;
 }
 
 .container {
@@ -116,6 +116,16 @@ footer a {
     text-decoration: underline;
 }
 
+.video {
+    width: 100%;
+    height: auto;
+}
+
+.gif-image {
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .project-card {
         flex: 1 1 calc(100% - 2rem);
@@ -126,12 +136,12 @@ footer a {
     }
 
     nav div {
-    	margin-right: 0;
-    	margin-top: 2rem;
-    	text-align: center;
+        margin-right: 0;
+        margin-top: 2rem;
+        text-align: center;
     }
 
     header h1 {
-    	font-size: 2rem;
+        font-size: 2rem;
     }
 }
