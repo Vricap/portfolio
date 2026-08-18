@@ -1,343 +1,656 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio - Vricap</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vrica Gede Penggalih — Software Engineer</title>
+    <meta name="description" content="Portfolio of Vrica Gede Penggalih (Vricap) — Software Engineer specializing in backend systems, custom languages, CLI tools, and web applications." />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="container nav-container">
+        <a href="#hero" class="brand">
+          <!--<span class="brand-dot"></span>-->
+          <span>vricap</span><span style="color: var(--accent-green)"></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" title="Switch Theme (Dark / Gruvbox / Nord / Light)">
+            <i class="fa fa-adjust"></i>
+          </button>
+
+          <a href="https://github.com/vricap" target="_blank" class="icon-btn" title="GitHub Profile">
+            <i class="fa fa-github" style="font-size: 1.1rem"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/vrica-gede-penggalih-266277260/" target="_blank" class="icon-btn" title="LinkedIn Profile">
+            <i class="fa fa-linkedin" style="font-size: 1.1rem"></i>
+          </a>
+
+          <a href="Vrica-Gede-Penggalih-CV.pdf" target="_blank" class="btn btn-outline btn-sm">
+            <i class="fa fa-file-text-o"></i> CV
+          </a>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section">
+        <div class="hero-grid">
+          <div class="hero-intro">
+            <div class="hero-title">// Software Engineer</div>
             <h1>Vrica Gede Penggalih</h1>
-            <nav>
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-                <div>
-                    <a
-                        style="color: white"
-                        href="Vrica-Gede-Penggalih-CV.pdf"
-                        target="_blank"
-                    >
-                        CV
-                    </a>
-                    <a
-                        style="color: white"
-                        href="https://github.com/vricap"
-                        target="_blank"
-                    >
-                        <i class="fa fa-github" style="font-size: 2rem"></i>
-                    </a>
-                    <a
-                        style="color: white"
-                        href="https://www.linkedin.com/in/vrica-gede-penggalih-266277260/"
-                        target="_blank"
-                    >
-                        <i
-                            class="fa fa-linkedin"
-                            style="
-                                border-radius: 20%;
-                                padding: 0.2rem;
-                                background-color: blue;
-                                color: white;
-                                font-size: 2rem;
-                            "
-                        ></i>
-                    </a>
-                </div>
-            </nav>
-        </header>
+            <p class="hero-bio">
+              Building lightweight systems, custom compilers/interpreters, high-performance web apps, and CLI developer tools. Minimalist by choice, fast by default.
+            </p>
+            <!--<div class="hero-tags">
+              <span class="tag tag-accent">● Available for opportunities</span>
+              <span class="tag">Arch Linux User</span>
+              <span class="tag">UNIX Philosophy</span>
+              <span class="tag">Go</span>
+              <span class="tag">Node.js / React</span>
+              <span class="tag">Laravel</span>
+            </div>-->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fa fa-code"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa fa-envelope-o"></i> Contact Me
+              </a>
+            </div>
+          </div>
 
-        <main class="container">
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>
-                        <span>
-                            ꦱꦸꦒꦺꦁꦫꦮꦸꦃ! Iam Vrica Gede Penggalih and i'm a
-                            software engineer. I’ve done front-end and back-end
-                            development. Outside web development, i’ve done
-                            building various CLI tools and even making my own
-                            programming language. I am a very flexible engineer,
-                            my portfolio/projects is proof that i comfortable
-                            and capable using various technologies. I use Arch
-                            Linux as my main operating system, I like it since
-                            it fast and parallel with my belief which is
-                            simplicity. I’m strong believer in UNIX philosophy
-                            when writing a program. Yes. That's it i think... The rest of this
-                            paragraph is just will be some gobbledygook to make
-                            this section more aesthetically pleasing.</span
-                        >
-                        <br /><br />
-                        ꦄꦪꦺꦴ ꦏꦺꦴꦚ꧀ꦕꦺꦴ ꦔꦪꦲꦶꦏꦂꦪꦤꦶꦁꦥꦿꦺꦴꦗꦺꦴ ꦏꦺꦤꦺ ꦏꦺꦤꦺ
-                        ꦒꦸꦒꦸꦂꦒꦸꦤꦸꦁꦠꦤ꧀ꦢꦁꦒꦮꦺ ꦱꦪꦸꦏ꧀ꦱꦪꦸꦏ꧀ꦫꦸꦏꦸꦤ꧀ ꦧꦺꦧꦫꦺꦔꦤ꧀ꦫꦺꦴꦏꦚ꧀ꦕꦤꦺ
-                        ꦭꦶꦭꦭꦤ꧀ꦭꦺꦒꦺꦴꦮꦺꦴ ꦏꦁꦒꦺꦴꦩꦸꦭꦾꦤꦶꦁꦤꦒꦺꦴꦫꦺꦴ ꦱꦶꦗꦶ(ꦭꦺꦴꦫꦺꦴ)
-                        ꦠꦺꦭꦸ(ꦥꦥꦠ꧀) ꦩꦗꦸꦥꦥꦠ꧀ꦥꦥꦠ꧀ ꦢꦶꦪꦸꦭꦁꦈꦭꦸꦔꦏꦺ ꦩꦺꦱ꧀ꦛꦶꦌꦁꦒꦭ꧀ꦫꦩ꧀ꦥꦸꦔꦺ
-                        ꦲꦺꦴꦭꦺꦴꦧꦶꦱ꧀ꦏꦸꦤ꧀ꦠꦸꦭ꧀ꦧꦫꦶꦱ꧀ ꦲꦺꦴꦭꦺꦴꦧꦶꦱ꧀ꦏꦸꦤ꧀ꦠꦸꦭ꧀ꦧꦫꦶꦱ꧀
-                        ꦲꦺꦴꦭꦺꦴꦧꦶꦱ꧀ꦏꦸꦤ꧀ꦠꦸꦭ꧀ꦧꦫꦶꦱ꧀ ꦲꦺꦴꦭꦺꦴꦧꦶꦱ꧀ꦏꦸꦤ꧀ꦠꦸꦭ꧀ꦧꦫꦶꦱ꧀
-                        <br /><br />
-                        ꦱꦁꦢꦺꦮꦶꦏꦠꦺꦴꦤ꧀ꦔ꧀ꦭꦩ꧀ꦭꦩꦶ ꦄꦩ꧀ꦧꦧꦂꦮꦺꦮꦔꦶꦱꦺꦩꦶ ꦄꦫꦸꦩ꧀ꦏꦺꦩ꧀ꦧꦔꦺꦩꦺꦭꦛꦶ
-                        ꦝꦱꦂꦮꦸꦭꦤꦺꦤ꧀ꦢꦢꦫꦶ ꦮꦺꦴꦁꦄꦪꦸꦱꦺꦠꦾꦫꦸꦩꦺꦏ꧀ꦱꦤꦭ ꦱꦱꦠ꧀ꦄꦧꦾꦺꦴꦫꦶꦁꦏꦂꦠꦶꦏ
-                        ꦏꦢꦾꦥꦸꦱ꧀ꦥꦶꦠꦆꦁꦤꦺꦤ꧀ꦢꦿ ꦲꦚ꧀ꦗꦁꦏꦺꦥꦶꦠꦿꦺꦱ꧀ꦤ
-                        ꦫꦱꦠꦿꦺꦱ꧀ꦤꦏꦁꦱꦺꦗꦠꦶꦩꦁꦒꦶꦲꦭꦺꦱ꧀ꦠꦫꦶ ꦄꦔꦶꦢꦸꦁꦠꦺꦩ꧀ꦧꦁꦱꦸꦕꦶ
-                        ꦚꦺꦁꦱꦺꦩꦶꦱꦏ꧀ꦗꦿꦺꦴꦤꦶꦁꦱꦺꦥꦶ ꦕꦃꦪꦩꦸꦄꦩꦝꦔꦶꦱꦫꦠꦿꦶ ꦢꦢꦾꦏꦺꦩ꧀ꦧꦔꦺꦄꦠꦶ
-                        ꦄꦔꦺꦤ꧀-ꦄꦔꦺꦤ꧀ꦏꦸꦭꦺꦭꦤꦠꦮꦁ ꦩꦶꦢꦺꦫꦶꦠꦤ꧀ꦥꦮꦔꦺꦤꦤ꧀
-                        ꦭꦸꦩꦏꦸꦤꦺꦩ꧀ꦧꦸꦱ꧀ꦩꦫꦁꦏꦧꦒꦾꦤ꧀ ꦧꦔꦺꦠ꧀ꦩꦤꦶꦱ꧀ꦱꦶꦤꦮꦁ
-                    </p>
-                    <img
-                        src="profile-img.jpg"
-                        alt="Vrica Gede Penggalih"
-                        class="about-image"
-                    />
+          <!-- Terminal Window -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">bash — 80x24</div>
+            </div>
+            <div class="terminal-body">
+              <div><span class="prompt">vricap@archlinux</span>:<span class="path">~</span>$ neofetch</div>
+              <div class="terminal-output" style="margin-top: 0.5rem;">
+                <div class="terminal-row">
+                  <span class="term-key">OS:</span>
+                  <span class="term-val">Arch Linux x86_64</span>
                 </div>
-            </section>
+                <div class="terminal-row">
+                  <span class="term-key">Kernel:</span>
+                  <span class="term-val">Linux (Simplicity &amp; Speed)</span>
+                </div>
+                <div class="terminal-row">
+                  <span class="term-key">Shell:</span>
+                  <span class="term-val">zsh / bash</span>
+                </div>
+                <!--<div class="terminal-row">
+                  <span class="term-key">Focus:</span>
+                  <span class="term-val">Backend &amp; Systems</span>
+                </div>-->
+                <div class="terminal-row">
+                  <span class="term-key">Languages:</span>
+                  <span class="term-val">Go, JS, Python, PHP</span>
+                </div>
+                <div class="terminal-row">
+                  <span class="term-key">Creations:</span>
+                  <span class="term-val">kusmala, gherver, taskm</span>
+                </div>
+              </div>
+              <div><span class="prompt">vricap@archlinux</span>:<span class="path">~</span>$ <span class="command">echo $PHILOSOPHY</span></div>
+              <div class="terminal-output" style="color: var(--accent-green)">
+                "Simple, fast, reproducible."
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <!-- <br /> -->
-                <p style="font-size: smaller">
-                    Selected from some of my projects. Visit my Github for all
-                    project i've ever done.
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Background, philosophy, and approach to software development.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="avatar-wrapper">
+            <img src="profile-img.jpg" alt="Vrica Gede Penggalih" />
+            <div class="status-badge">
+              <span class="brand-dot"></span>
+              <span>Based in Indonesia 🇮🇩</span>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p>
+              I am <strong>Vrica Gede Penggalih</strong>, a software engineer with experience across full-stack web development and low-level software engineering. Beyond traditional web apps, I enjoy engineering custom CLI tools and even built my own interpreted programming language from scratch.
+            </p>
+            <p>
+              I am a flexible developer comfortable working with various tech stacks—from high-level web frameworks like React and Laravel to raw socket network programming and Go interpreters.
+            </p>
+            <p>
+              I run <strong>Arch Linux</strong> as my daily driver. I appreciate its speed, transparency, and alignment with my core engineering belief: <em>simplicity over artificial complexity</em>. When writing software, I strive to embody the UNIX philosophy—building focused, reliable tools that do one thing exceptionally well.
+            </p>
+
+            <!-- Javanese Accordion -->
+            <div class="javanese-box">
+              <button class="javanese-toggle" id="javaneseToggle">
+                <span>📜 Cultural Note &amp; Javanese Text (ꦱꦸꦒꦺꦁꦫꦮꦸꦃ)</span>
+                <span id="javaneseArrow">▼</span>
+              </button>
+              <div class="javanese-content" id="javaneseContent">
+                <span class="javanese-script">
+                  ꦱꦸꦒꦺꦁꦫꦮꦸꦃ! ꦄꦪꦺꦴ ꦏꦺꦴꦚ꧀ꦕꦺꦴ ꦔꦪꦲꦶꦏꦂꦪꦤꦶꦁꦥꦿꦺꦴꦗꦺꦴ ꦏꦺꦤꦺ ꦏꦺꦤꦺ ꦒꦸꦒꦸꦂꦒꦸꦤꦸꦁꦠꦤ꧀ꦢꦁꦒꦮꦺ ꦱꦪꦸꦏ꧀ꦱꦪꦸꦏ꧀ꦫꦸꦏꦸꦤ꧀...
+                </span>
+                <p style="font-size: 0.875rem; margin-bottom: 0;">
+                  <em>"Sugeng rawuh!"</em> means Welcome in Javanese. The text above features traditional Javanese script (Aksara Jawa) expressing spirit of collaboration (gugur gunung), harmony, and dedication to craftsmanship.
                 </p>
-                <div class="projects">
-                    <div class="project-card">
-                        <h3>
-                            <a href="https://github.com/vricap/kusmala"
-                                >kusmala</a
-                            >
-                        </h3>
-                        <p>
-                            My own programming language. kusmala is interpreted
-                            language with its syntax emphasizing on Indonesian
-                            Language. The interpreter written in Go. <br />
-                            DEMO:
-                            <a
-                                href="https://www.youtube.com/watch?v=3Bi_v5VWL5M"
-                                >https://www.youtube.com/watch?v=3Bi_v5VWL5M</a
-                            >. <br />
-                            <br />Try the languange from the playground: <br />
-                            <a
-                                href="https://ku-7a61eb073c154657985fb0a5e6bce6e6.ecs.ap-southeast-1.on.aws/"
-                                >https://ku-7a61eb073c154657985fb0a5e6bce6e6.ecs.ap-southeast-1.on.aws/</a
-                            >.
-                        </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <p>Features:</p>
-                        <ul>
-                            <li>
-                                Data types available:
-                                <strong>string, integer, boolean</strong>
-                            </li>
-                            <li>
-                                Data structure available: <strong>array</strong>
-                            </li>
-                            <li>Conditional</li>
-                            <li>
-                                Functions as both
-                                <strong>high-order functions</strong> and
-                                <strong>first-class functions</strong>
-                            </li>
-                            <li>
-                                There's also a error message along with a line
-                                number.
-                            </li>
-                        </ul>
-                        <img src="resources/kusmala-demo.gif" alt="kusmala demo gif" class="gif-image">
-                    </div>
+      <!-- Technical Skills Section -->
+      <section id="skills" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core programming languages, web stacks, databases, architecture, and developer tools.</p>
+        </div>
 
-                    <div class="project-card">
-                        <h3>
-                            <a href="https://github.com/Vricap/dms-aino"
-                                >dms aino</a
-                            >
-                        </h3>
-                        <p>
-                            A Document Management System for a real company
-                            client PT AINO Indonesia that supports sequential
-                            signing, parallel signing (AND), and group-based
-                            signing (OR / first-complete). It is part of my
-                            Capstone Project in my Uni. On my team, my desk jobs
-                            are as the only programmer. The system (web app) is
-                            implemented using REACT as the frontend, and NODEJS
-                            (with Express) as the backend, MONGODB (with
-                            Mongoose) used as the database, while JWT used as
-                            the authentication. The system architecture is
-                            monolithic with RESTful API.<br />
-                            Try:
-                            <a href="https://dms-aino.onrender.com/"
-                                >https://dms-aino.onrender.com/</a
-                            >. <br />
-                            See:
-                            <a href="./screenshot/dms/screenshot.html"
-                                >screenshots</a
-                            >.
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-card">
+            <div class="skill-category-title">
+              <i class="fa fa-code"></i> Languages
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-pill">Go</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">PHP</span>
+            </div>
+          </div>
 
-                            <p>Features:</p>
-                                <ul>
-                                    <li>
-                                        Supports sequential, parallel, and group-based digital signing workflows.
-                                    </li>
-                                    <li>
-                                        Supports Upload, View, Send, Sign, Audit, Download, and Delete document.
-                                    </li>
-                                    <li>
-                                        Digital signing with sign image. drag & drop for signing place.
-                                    </li>
-                                    <li>Authorization with RBAC and authentication with JWT.</li>
-                                    <li>Users managements for Admin.</li>
-                                </ul>
-                        </p>
+          <!-- Web Technologies -->
+          <div class="skill-card">
+            <div class="skill-category-title">
+              <i class="fa fa-globe"></i> Web Technologies
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Laravel</span>
+              <span class="skill-pill">NodeJS (ExpressJS)</span>
+            </div>
+          </div>
 
-                        <div class="video-container">
-                            <video autoplay muted playsinline loop controls class="video">
-                                <source src="resources/dms-aino-demo.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
+          <!-- Database -->
+          <div class="skill-card">
+            <div class="skill-category-title">
+              <i class="fa fa-database"></i> Database
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">Redis</span>
+            </div>
+          </div>
 
-                    <div class="project-card">
-                        <h3>
-                            <a href="https://github.com/Vricap/taskm">taskm</a>
-                        </h3>
-                        <p>
-                            CLI based task manager (supposedly) - for linux.
-                            <br />
-                            A tools to see running processes and overview of a
-                            computer. Written in Go.
-                        </p>
-                         <img src="resources/taskm.gif" alt="taskm demo gif" class="gif-image">
-                    </div>
-                    <div class="project-card">
-                        <h3>
-                            <a href="https://github.com/Vricap/gherver"
-                                >gherver</a
-                            >
-                        </h3>
-                        <p>
-                            My own http library. Golang http server from scratch, without using any
-                            http related library. Building this make me well
-                            rounded backend developer, who understood http
-                            protocol deeply.
-                        </p>
-                        <p>
-                        	I built gherver to explore the fundamentals behind HTTP servers and gain a deeper understanding of network-level backend development. The library implements core server functionality such as:
+          <!-- Concepts -->
+          <div class="skill-card">
+            <div class="skill-category-title">
+              <i class="fa fa-cubes"></i> Concepts &amp; Architecture
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-pill">REST API</span>
+              <span class="skill-pill">JWT Authentication</span>
+              <span class="skill-pill">RBAC</span>
+              <span class="skill-pill">HTTP Protocol</span>
+              <span class="skill-pill">Monolithic Architecture</span>
+            </div>
+          </div>
 
-                        	<ul>
-                        		<li>TCP-based HTTP request handling</li>
-                        		<li>Method and path-based routing</li>
-                        		<li>HTTP status codes and response headers</li>
-                        		<li>JSON and raw byte responses</li>
-                        		<li>Static file and media serving</li>
-                        		<li>CORS configuration</li>
-                        		<li>A simple handler-based API for building web applications</li>
-                        	</ul>
-                        </p>
-                    </div>
-                </div>
-            </section>
+          <!-- Tools -->
+          <div class="skill-card">
+            <div class="skill-category-title">
+              <i class="fa fa-wrench"></i> Tools &amp; Platform
+            </div>
+            <div class="skill-badge-list">
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">Linux (Arch Linux)</span>
+              <span class="skill-pill">Docker</span>
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">Postman</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section id="experience" class="section">
-                <h2>Experience</h2>
-                <div class="experience">
-                    <h3>
-                        Internship at PT. Aino Teknologi
-                        <em>(Oct&mdash;Dec 2024)</em>
-                    </h3>
-                    <p>
-                        During my internship at Aino, I given a task to develop
-                        an ERP &mdash; Project Dashboard &mdash; for internal
-                        company use to better managing various project the
-                        company has using Laravel and Postgresql. The dashboard
-                        implement RBAC (Role-Based-Access-Control) system.
-                    </p>
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            A selection of key projects I've designed and built. Visit my <a href="https://github.com/vricap" target="_blank" style="color: var(--accent-green); text-decoration: underline;">GitHub</a> for more.
+          </p>
+        </div>
 
-                    <h3>Teaching Programming at SMK <em>(August 2025)</em></h3>
-                    <p>
-                        During KKN at Gunung Kidul, I have a proker which is
-                        teaching students of SMK Muhammadiyah 1 Playen TKJ basic
-                        programming. What’s unique is that I use a programming
-                        language that uses Bahasa Indonesia as the syntax,
-                        called BAIK. Therefore, the students could the grasp the
-                        concept better and learn how to code fast.
-                    </p>
-                </div>
-                <br />
-                <div class="sertificates">
-                    <h3>Some Sertificates</h3>
-                    <ul>
-                        <li>
-                            PT. Aino Internship:
-                            <a
-                                href="sertificates/Vrica Gede Penggalih - Product Intern.pdf"
-                                >Product Intern</a
-                            >
-                        </li>
-                        <li>
-                            Dicoding:
-                            <a
-                                href="sertificates/sertifikat_ml_pemula_dicoding.pdf"
-                                target="_blank"
-                                >machine learning</a
-                            ><em> - i got 4/5 star in the final assignment</em>
-                        </li>
-                        <li>
-                            Dicoding:
-                            <a
-                                href="sertificates/sertifikat_backend_pemula_dicoding.pdf"
-                                target="_blank"
-                                >backend</a
-                            ><em> - i got 5/5 star in the final assignment</em>
-                        </li>
-                        <li>
-                            Dicoding:
-                            <a
-                                href="sertificates/sertifikat_aplikasi_flutter_pemula.pdf"
-                                target="_blank"
-                                >multi-platform/flutter</a
-                            ><em> - i got 3/5 star in the final assignment</em>
-                        </li>
-                        <li>
-                            Dicoding:
-                            <a
-                                href="sertificates/sertifikat_aws_cloud_dicoding.pdf"
-                                target="_blank"
-                                >aws cloud</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-                <h3>
-                    <a href="Vrica-Gede-Penggalih-CV.pdf"
-                        ><strong>See my CV.</strong></a
-                    >
-                </h3>
-            </section>
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="systems">Systems &amp; Languages</button>
+          <button class="filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn" data-filter="cli">CLI Tools</button>
+        </div>
 
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <p>
-                    Feel free to reach out via email at
-                    <a href="mailto:vricagedepenggalih@gmail.com"
-                        ><strong> vricagedepenggalih@gmail.com</strong></a
-                    >
-                    or connect with me on
-                    <a
-                        href="https://www.linkedin.com/in/vrica-gede-penggalih-266277260/"
-                        ><strong>LinkedIn</strong></a
-                    >. Visit my
-                    <a href="https://github.com/vricap"
-                        ><strong>Github</strong></a
-                    >.
-                </p>
-            </section>
-        </main>
+        <div class="projects-grid">
+          <!-- Project 1: Kusmala -->
+          <div class="project-card" data-category="systems">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-terminal" style="color: var(--accent-green)"></i>
+                <a href="https://github.com/vricap/kusmala" target="_blank" class="project-title">
+                    kusmala
+                </a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/vricap/kusmala" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://ku-7a61eb073c154657985fb0a5e6bce6e6.ecs.ap-southeast-1.on.aws/" target="_blank" class="icon-btn" title="Live Playground">
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </div>
+            </div>
 
-        <footer>&copy; 2025 Vricap</footer>
-    </body>
+            <span class="project-time">Nov 2024 — Feb 2025</span>
+            <p class="project-description">
+              A custom interpreted programming language written in <strong>Go</strong> with syntax focused on the <strong>Indonesian Language</strong>. Features its own lexer, parser, evaluator, and detailed line-number error reporting.
+            </p>
+
+            <ul class="project-feature-list">
+              <li>Data types: string, integer, boolean, and arrays</li>
+              <li>High-order and first-class functions support</li>
+              <li>Conditional statements and rich expression evaluation</li>
+              <li>Includes online web playground &amp; CLI execution engine</li>
+            </ul>
+
+            <div class="project-media">
+              <img src="resources/kusmala-demo.gif" alt="kusmala interpreter demo" loading="lazy" />
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go</span>
+              <span class="tag">Interpreter</span>
+              <span class="tag">Compiler Dev</span>
+              <span class="tag">AST &amp; Parser</span>
+              <span class="tag">Indonesian Syntax</span>
+            </div>
+          </div>
+
+          <!-- Project 2: DMS Aino -->
+          <div class="project-card" data-category="web">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-file-text" style="color: var(--accent-blue)"></i>
+                <a href="https://github.com/Vricap/dms-aino" target="_blank" class="project-title">dms aino</a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vricap/dms-aino" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+                <a href="https://dms-aino.onrender.com/" target="_blank" class="icon-btn" title="Live Demo">
+                  <i class="fa fa-external-link"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">Sept 2025 — Dec 2025</span>
+            <p class="project-description">
+              An enterprise Document Management System created for client <strong>PT Aino Indonesia</strong> as my University Capstone Project. Built as the sole full-stack developer on the team.
+            </p>
+
+            <ul class="project-feature-list">
+              <li>Supports sequential, parallel (AND), &amp; group-based (OR / first-complete) digital signing workflows</li>
+              <li>Drag &amp; drop signature placement with visual signature overlay</li>
+              <li>Complete audit logging, document tracking, RBAC, and JWT authentication</li>
+            </ul>
+
+            <div class="project-media">
+              <video autoplay muted loop playsinline controls class="video">
+                <source src="resources/dms-aino-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              <a href="#" id="openDmsGallery" class="btn btn-outline btn-sm" style="width: 100%;">
+                <i class="fa fa-picture-o"></i> View Screenshot Gallery (23 Images)
+              </a>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">React</span>
+              <span class="tag">Node.js / Express</span>
+              <span class="tag">MongoDB / Mongoose</span>
+              <span class="tag">JWT &amp; RBAC</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Gherver -->
+          <div class="project-card" data-category="systems">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-server" style="color: var(--accent-purple)"></i>
+                <a href="https://github.com/Vricap/gherver" target="_blank" class="project-title">gherver</a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vricap/gherver" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">May 2025</span>
+            <p class="project-description">
+              A lightweight custom HTTP server library written in <strong>Golang from scratch</strong> without relying on standard HTTP packages (using raw TCP connections), giving deep insight into network protocol mechanics.
+            </p>
+
+            <ul class="project-feature-list">
+              <li>TCP socket-based HTTP request parsing &amp; response formatting</li>
+              <li>Method and path-based dynamic routing</li>
+              <li>Supports HTTP status codes, JSON/byte responses, and CORS handling</li>
+              <li>Static file and media serving with custom middleware pattern</li>
+            </ul>
+
+            <div class="terminal-window" style="margin-bottom: 1rem; font-size: 0.78rem;">
+              <div class="terminal-body" style="padding: 0.75rem;">
+                <span style="color: var(--accent-purple)">// Zero-dependency HTTP server engine</span><br/>
+                <span style="color: var(--accent-blue)">server</span> := gherver.NewServer(<span style="color: var(--accent-amber)">":8080"</span>)<br/>
+                server.GET(<span style="color: var(--accent-amber)">"/api/health"</span>, func(req *Request) Response {<br/>
+                &nbsp;&nbsp;<span style="color: var(--accent-green)">return</span> ResponseJSON(200, Map{<span style="color: var(--accent-amber)">"status"</span>: <span style="color: var(--accent-amber)">"ok"</span>})<br/>
+                })
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go</span>
+              <span class="tag">TCP Sockets</span>
+              <span class="tag">HTTP Protocol</span>
+              <span class="tag">Backend Engine</span>
+              <span class="tag">Zero Dependencies</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Taskm -->
+          <div class="project-card" data-category="cli systems">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-tachometer" style="color: var(--accent-amber)"></i>
+                <a href="https://github.com/Vricap/taskm" target="_blank" class="project-title">taskm</a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vricap/taskm" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">Feb 2024</span>
+            <p class="project-description">
+              A fast CLI process visualizer and system task manager written in <strong>Go for Linux systems</strong>. Provides a clean overview of active processes, resource usage, and system stats.
+            </p>
+
+            <ul class="project-feature-list">
+              <li>Monitors system processes and resource consumption</li>
+              <li>Minimal CPU &amp; RAM footprint</li>
+              <li>Built specifically for Linux environments</li>
+            </ul>
+
+            <div class="project-media">
+              <img src="resources/taskm.gif" alt="taskm CLI preview" loading="lazy" />
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go</span>
+              <span class="tag">CLI Tool</span>
+              <span class="tag">Linux System</span>
+              <span class="tag">Process Monitor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">Professional internships and community teaching experience.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-role">Software Engineering Intern (ERP &amp; Backend)</div>
+              <div class="timeline-company">PT. Aino Teknologi Indonesia</div>
+              <div class="timeline-date">Oct 2024 — Dec 2024</div>
+              <p class="timeline-desc">
+                Engineered an internal Enterprise Resource Planning (ERP) Project Dashboard to streamline tracking across company-wide projects. Implemented using <strong>Laravel</strong> and <strong>PostgreSQL</strong> with a robust Role-Based Access Control (RBAC) architecture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-role">Programming Instructor / Educator (KKN)</div>
+              <div class="timeline-company">SMK Muhammadiyah 1 Playen (TKJ Department)</div>
+              <div class="timeline-date">August 2025</div>
+              <p class="timeline-desc">
+                Taught fundamental programming concepts to vocational high school students in Gunung Kidul. Utilized <strong>BAIK</strong>—a programming language featuring Indonesian syntax—allowing students to quickly grasp core programming logic, algorithms, and flow control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates Section -->
+      <section id="certificates" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Certificates &amp; Credentials</h2>
+          <p class="section-subtitle">Formal training certifications and internship completion certificates.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1 -->
+          <a href="sertificates/Vrica Gede Penggalih - Product Intern.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Product / Software Intern</h4>
+              <div class="cert-issuer">PT. Aino Teknologi</div>
+            </div>
+            <span class="cert-badge" style="background-color: rgba(16, 185, 129, 0.15); color: var(--accent-green); border-color: rgba(16, 185, 129, 0.3);">
+              Verified
+            </span>
+          </a>
+
+          <!-- Cert 2 -->
+          <a href="sertificates/sertifikat_backend_pemula_dicoding.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Backend Developer</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">5/5 ★ Rating</span>
+          </a>
+
+          <!-- Cert 3 -->
+          <a href="sertificates/sertifikat_ml_pemula_dicoding.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Machine Learning Pemula</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">4/5 ★ Rating</span>
+          </a>
+
+          <!-- Cert 4 -->
+          <a href="sertificates/sertifikat_aplikasi_flutter_pemula.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Multi-Platform Flutter</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">3/5 ★ Rating</span>
+          </a>
+
+          <!-- Cert 5 -->
+          <a href="sertificates/sertifikat_aws_cloud_dicoding.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>AWS Cloud Practitioner</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">Cloud</span>
+          </a>
+
+          <!-- Cert 6 -->
+          <a href="sertificates/sertifikat_dasar_javascript.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Dasar Programming JavaScript</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">JS</span>
+          </a>
+
+          <!-- Cert 7 -->
+          <a href="sertificates/sertifikat_python_pemula_dicoding.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Python Programming</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">Python</span>
+          </a>
+
+          <!-- Cert 8 -->
+          <a href="sertificates/sertifikat_dasar_ai.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Dasar Artificial Intelligence</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">AI</span>
+          </a>
+
+          <!-- Cert 9 -->
+          <a href="sertificates/sertifikat_memulai_dengan_dart.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Programming Dart</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">Dart</span>
+          </a>
+
+          <!-- Cert 10 -->
+          <a href="sertificates/sertifikat_visualisasi_data_dicoding.pdf" target="_blank" class="cert-card">
+            <div class="cert-info">
+              <h4>Visualisasi Data</h4>
+              <div class="cert-issuer">Dicoding Academy</div>
+            </div>
+            <span class="cert-badge">Data</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="contact-card">
+          <h3>Let's Build Something Together</h3>
+          <p>
+            Whether you have a software engineering opportunity, custom systems inquiry, or just want to chat about Go or Arch Linux, feel free to reach out.
+          </p>
+
+          <div class="email-box">
+            <i class="fa fa-envelope-o"></i>
+            <span>vricagedepenggalih@gmail.com</span>
+            <button class="btn btn-outline btn-sm" id="copyEmailBtn" style="margin-left: 0.5rem;" title="Copy to clipboard">
+              <i class="fa fa-clone"></i> Copy
+            </button>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/vricap" target="_blank" class="btn btn-outline">
+              <i class="fa fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/vrica-gede-penggalih-266277260/" target="_blank" class="btn btn-outline">
+              <i class="fa fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="Vrica-Gede-Penggalih-CV.pdf" target="_blank" class="btn btn-primary">
+              <i class="fa fa-file-text-o"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Lightbox for DMS Screenshots -->
+    <div class="modal" id="dmsModal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeDmsModal">&times;</button>
+        <h3 style="color: var(--text-heading); margin-bottom: 0.5rem;">DMS Aino Screenshots</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Detailed screenshots of the Document Management System built for PT Aino Indonesia. <a href="screenshot/dms/screenshot.html" target="_blank" style="color: var(--accent-green)">Open full page list &rarr;</a>
+        </p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="screenshot/dms/dashboard.jpg" alt="DMS Dashboard" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/documents.jpg" alt="DMS Documents" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/ttd-dokumen.jpg" alt="DMS Signature UI" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/audit-dokumen.jpg" alt="DMS Audit Log" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/users.jpg" alt="DMS User Management" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/upload.jpg" alt="DMS File Upload" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/kirim-dokumen.jpg" alt="DMS Send Workflow" /></div>
+          <div class="gallery-item"><img src="screenshot/dms/inbox.jpg" alt="DMS Inbox" /></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Vricap.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
