@@ -50,23 +50,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
+  function filterProjects(filter) {
+    filterBtns.forEach((btn) => {
+      btn.classList.toggle(
+        "active",
+        btn.getAttribute("data-filter") === filter
+      );
+    });
+
+    projectCards.forEach((card) => {
+      const categories = card.getAttribute("data-category") || "";
+
+      if (categories.includes(filter)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
       const filter = btn.getAttribute("data-filter");
-
-      projectCards.forEach((card) => {
-        const categories = card.getAttribute("data-category") || "";
-        if (filter === "all" || categories.includes(filter)) {
-          card.style.display = "flex";
-        } else {
-          card.style.display = "none";
-        }
-      });
+      filterProjects(filter);
     });
   });
+
+  // Featured menjadi filter default saat halaman pertama kali dibuka
+  filterProjects("featured");
 
   // Copy Email to Clipboard
   const copyEmailBtn = document.getElementById("copyEmailBtn");

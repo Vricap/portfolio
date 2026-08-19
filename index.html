@@ -118,10 +118,10 @@
                   <span class="term-key">Languages:</span>
                   <span class="term-val">Go, Javascript, Python, PHP, Shell</span>
                 </div>
-                <div class="terminal-row">
+                <!--<div class="terminal-row">
                   <span class="term-key">Creations:</span>
                   <span class="term-val">kusmala, gherver, taskm</span>
-                </div>
+                </div>-->
               </div>
               <div><span class="prompt">vricap@archlinux</span>:<span class="path">~</span>$ <span class="command">echo $PHILOSOPHY</span></div>
               <div class="terminal-output" style="color: var(--accent-green)">
@@ -266,7 +266,7 @@
         <!-- Filter Bar -->
         <div class="filter-bar">
           <!--<button class="filter-btn active" data-filter="all">Featured</button>-->
-          <button class="filter-btn active" data-filter="featured">Featured</button>
+          <button class="filter-btn active featured-btn" data-filter="featured">Featured</button>
           <button class="filter-btn" data-filter="systems">Systems Programming</button>
           <button class="filter-btn" data-filter="network">Network Programming</button>
           <button class="filter-btn" data-filter="web">Web Programming</button>
@@ -374,7 +374,7 @@
           </div>
 
           <!-- Project 3: Gherver -->
-          <div class="project-card" data-category="network systems featured">
+          <div class="project-card" data-category="network featured">
             <div class="project-header">
               <div class="project-title-area">
                 <i class="fa fa-server" style="color: var(--accent-purple)"></i>
@@ -438,7 +438,7 @@
           </div>
 
           <!-- Project 4: Taskm -->
-          <div class="project-card" data-category="cli systems featured">
+          <div class="project-card" data-category="cli featured">
             <div class="project-header">
               <div class="project-title-area">
                 <i class="fa fa-tachometer" style="color: var(--accent-amber)"></i>
@@ -472,6 +472,103 @@
               <span class="tag">CLI Tool</span>
               <span class="tag">Linux System</span>
               <span class="tag">Process Monitor</span>
+            </div>
+          </div>
+
+          <!-- Project jocr -->
+          <div class="project-card" data-category="web">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-terminal" style="color: var(--accent-green)"></i>
+                <a href="https://github.com/vricap/jocr" target="_blank" class="project-title">
+                    jocr
+                </a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/vricap/jocr" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">Apr 2025</span>
+            <p class="project-description">
+                A web-based OCR application for recognizing Javanese language from images and converting it into digital text. Built with Golang for the backend and Tesseract OCR as the recognition engine, featuring a clean and minimal interface with image preview, drag-and-drop upload, OCR processing, and downloadable text results.
+            </p>
+
+            <ul class="project-feature-list">
+                <li>Built a web-based Javanese OCR application using Golang and Tesseract OCR.</li>
+                <li>Implemented image upload, drag-and-drop, real-time image preview, OCR text extraction, and downloadable output</li>
+                <li>Used <em><a href="https://github.com/tesseract-ocr/tessdata_best">tessdata_best</a></em> model provided by the tesseract engine community.</li>
+            </ul>
+
+            <div class="project-media">
+              <video autoplay muted loop playsinline controls class="video">
+                <source src="resources/jocr-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go</span>
+              <span class="tag">Web Programming</span>
+              <span class="tag">Tesseract Engine</span>
+              <span class="tag">OCR</span>
+            </div>
+          </div>
+
+          <!-- Project zipper -->
+          <div class="project-card" data-category="cli">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-terminal" style="color: var(--accent-green)"></i>
+                <a href="https://github.com/vricap/zipper" target="_blank" class="project-title">
+                    zipper
+                </a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/vricap/zipper" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">Dec 2023</span>
+            <p class="project-description">
+                A lightweight command-line utility for compressing and extracting files and folders using ZIP archives. Built with Go, Zipper provides a simple CLI interface for quickly zipping individual files, multiple files, or entire directories, as well as extracting ZIP archives to a specified destination.
+            </p>
+
+            <ul class="project-feature-list">
+                <li>Zip individual files or multiple files or even entire directories</li>
+                <li>Extract ZIP archives with custom destination paths</li>
+                <li>Simple command-line interface</li>
+                <li>Lightweight and fast</li>
+            </ul>
+
+            <div class="terminal-window" style="margin-bottom: 1rem; font-size: 0.78rem;">
+              <div class="terminal-body" style="padding: 0.75rem;">
+                <span style="color: var(--accent-purple)">// EXAMPLE</span><br/>
+                <span style="color: var(--accent-purple)">// ZIP MULTIPLE FILES</span><br/>
+                <span style="color: var(--accent-blue)">$</span> zipper -z -fl
+                <span style="color: var(--accent-amber)">[task1.pdf task2.pdf]</span>
+                <span style="color: var(--accent-amber)">homework</span><br/><br/>
+
+                <span style="color: var(--accent-purple)">// ZIP A FOLDER</span><br/>
+                <span style="color: var(--accent-blue)">$</span> zipper -z -fd
+                <span style="color: var(--accent-amber)">my-project</span>
+                <span style="color: var(--accent-amber)">backup</span><br/><br/>
+
+                <span style="color: var(--accent-purple)">// UNZIP AN ARCHIVE</span><br/>
+                <span style="color: var(--accent-blue)">$</span> zipper -u
+                <span style="color: var(--accent-amber)">homework.zip</span>
+                <span style="color: var(--accent-amber)">homework-done</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go</span>
+              <span class="tag">CLI tool</span>
+              <span class="tag">ZIP Archive</span>
             </div>
           </div>
         </div>
