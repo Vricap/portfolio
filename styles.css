@@ -577,6 +577,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  list-style-type: none;
 }
 
 .skill-pill {
@@ -843,6 +844,155 @@ header {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   white-space: nowrap;
+}
+
+/* Subsections */
+.subsection {
+  margin-top: 2.5rem;
+}
+
+.subsection-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.subsection-title::before {
+  content: "";
+  width: 3px;
+  height: 1.1rem;
+  background-color: var(--accent-green);
+  border-radius: 2px;
+}
+
+/* Certificates */
+.cert-card {
+  /* keep your existing styles */
+}
+
+.cert-badge.verified {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--accent-green);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Published Papers Grid */
+.paper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Paper Card */
+.paper-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: var(--text-main);
+  min-height: 150px;
+}
+
+.paper-card:hover {
+  border-color: var(--accent-green);
+  background-color: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Paper Icon */
+.paper-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-size: 1.1rem;
+}
+
+/* Paper Information */
+.paper-info {
+  flex: 1;
+  min-width: 0;
+  padding-right: 0.5rem;
+}
+
+.paper-info h4 {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin: 0 0 0.65rem;
+}
+
+.paper-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.paper-journal {
+  color: var(--text-main);
+}
+
+.paper-divider {
+  opacity: 0.5;
+}
+
+.paper-date {
+  margin-top: 0.45rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Paper Badge */
+.paper-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--accent-amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .paper-card {
+    padding: 1rem;
+  }
+
+  .paper-badge {
+    position: static;
+    align-self: flex-start;
+  }
+
+  .paper-info h4 {
+    font-size: 0.9rem;
+  }
 }
 
 /* Contact Box */
