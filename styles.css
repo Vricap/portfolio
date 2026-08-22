@@ -599,21 +599,59 @@ header {
 /* Projects Filter & Grid */
 .filter-bar {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .filter-btn {
-  background: var(--bg-card);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.55rem 1rem;
   border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  background: color-mix(in srgb, var(--bg-card) 92%, white 8%);
   color: var(--text-muted);
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-sm);
+
   font-size: 0.85rem;
   font-family: var(--font-mono);
+  font-weight: 500;
+
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+}
+
+/* Count badge */
+.filter-btn .count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 24px;
+  padding: 0 0.45rem;
+
+  border-radius: 999px;
+  background: var(--surface-secondary);
+  color: var(--text-secondary);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.filter-btn.active .count {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+/* Optional: Featured gradient */
+.featured-btn.active {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-color: transparent;
 }
 
 .filter-btn:hover,
