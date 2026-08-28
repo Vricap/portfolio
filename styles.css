@@ -921,7 +921,7 @@ header {
 /* Published Papers Grid */
 .paper-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 1.25rem;
 }
 
@@ -987,6 +987,13 @@ header {
   font-family: var(--font-mono);
 }
 
+.paper-description {
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #94a3b8; /* subtle gray */
+}
+
 .paper-journal {
   color: var(--text-main);
 }
@@ -1031,6 +1038,39 @@ header {
   .paper-info h4 {
     font-size: 0.9rem;
   }
+
+  .paper-grid {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+  }
+
+  .project-media img,
+  .project-media video {
+    /*width: 100%;*/
+    /*max-height: 280px;*/
+    object-fit: cover;
+    display: block;
+  }
+
+  .project-card {
+      max-width: 350px;
+  }
+
+  .contact-card {
+      max-width: 100%;
+  }
+
+  /*.email-box {
+      max-width: 100%;
+  }*/
+
+  /*.email-contact {
+      display: flex;
+      flex-direction: row;
+  }*/
+
+  .email-box .btn {
+      display: none;
+  }
 }
 
 /* Contact Box */
@@ -1067,6 +1107,7 @@ header {
   font-size: 0.95rem;
   color: var(--accent-green);
   margin-bottom: 1.5rem;
+  /*width: 100%;*/
 }
 
 .social-links {
@@ -1180,6 +1221,10 @@ footer a:hover {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .paper-grid {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -1205,5 +1250,9 @@ footer a:hover {
 
   .hero-intro h1 {
     font-size: 2rem;
+  }
+
+  .paper-grid {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
   }
 }
