@@ -280,11 +280,15 @@
           </button>
           <button class="filter-btn" data-filter="web">
               Web Programming
-              <span class="count">3</span>
+              <span class="count">4</span>
           </button>
           <button class="filter-btn" data-filter="cli">
               CLI Programming
               <span class="count">2</span>
+          </button>
+          <button class="filter-btn" data-filter="ml">
+              Machine Learning
+              <span class="count">1</span>
           </button>
         </div>
 
@@ -388,8 +392,53 @@
             </div>
           </div>
 
+          <!-- Project Piyambak -->
+          <div class="project-card" data-category="web featured">
+            <div class="project-header">
+              <div class="project-title-area">
+                <i class="fa fa-comment" style="color: var(--accent-blue)"></i>
+                <a href="https://github.com/Vricap/piyambak" target="_blank" class="project-title">piyambak</a>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Vricap/piyambak" target="_blank" class="icon-btn" title="View Code on GitHub">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+            <span class="project-time">September 2026</span>
+            <p class="project-description">
+                <strong>A lightweight, self-hosted, deployless, anonymous public real-time chat app</strong> that becomes publicly accessible without deploying to a cloud server. Instead of deploying to a VPS or cloud platform, the application runs entirely on the host's local machine and uses Ngrok tunnel to expose it to the internet through a secure public URL.<br>
+                Users can join existing chat rooms or create their own rooms with optional password protection. No registration, email, or user accounts are required, only a temporary username is needed to participate in conversations.
+            </p>
+
+            <ul class="project-feature-list">
+              <li>Real-time messaging using WebSockets and utilizing Go goroutines concurrency and channels</li>
+              <li>Create and join multiple chat rooms</li>
+              <li>Anonymous usernames (no accounts, resgistration or authentication system)</li>
+              <li>Self-hosted and publicly accessible through Ngrok tunneling</li>
+              <li>SQLite for storing chat history</li>
+              <li>Ngrok integration to expose the local server as a public URL without deploying to a VPS or cloud service</li>
+            </ul>
+
+            <div class="project-media">
+              <video autoplay muted loop playsinline controls class="video">
+                <source src="resources/piyambak-demo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-accent">Go + Fiber</span>
+              <span class="tag">Websocket</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">NGROK</span>
+              <span class="tag">Real-time chat</span>
+            </div>
+          </div>
+
           <!-- Project 3: Gherver -->
-          <div class="project-card" data-category="network featured">
+          <div class="project-card" data-category="network">
             <div class="project-header">
               <div class="project-title-area">
                 <i class="fa fa-server" style="color: var(--accent-purple)"></i>
@@ -590,7 +639,7 @@
           </div>
 
           <!-- Project fishscan -->
-          <div class="project-card" data-category="web">
+          <div class="project-card" data-category="web ml">
             <div class="project-header">
               <div class="project-title-area">
                 <i class="fa fa-terminal" style="color: var(--accent-green)"></i>
