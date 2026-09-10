@@ -434,7 +434,7 @@ header {
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 360px 1fr;
   gap: 2.5rem;
   align-items: start;
 }
@@ -442,22 +442,23 @@ header {
 .avatar-wrapper {
   position: relative;
   border-radius: var(--radius);
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 2px solid var(--border-color);
   background: var(--bg-card);
   box-shadow: var(--shadow);
 }
 
 .avatar-wrapper img {
-  width: 100%;
-  height: auto;
+  width: 360px;
+  height: 530px;
   display: block;
   object-fit: cover;
+  object-position: center bottom;
   transition: transform 0.3s ease;
 }
 
 .avatar-wrapper:hover img {
-  transform: scale(1.03);
+  transition: transform 0.3s ease;
 }
 
 .status-badge {
@@ -1025,7 +1026,12 @@ header {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 600px) {	
+  .avatar-wrapper img {
+    max-width: 300px;
+    max-height: 400px;
+  }
+
   .paper-card {
     padding: 1rem;
   }
@@ -1215,7 +1221,7 @@ footer a:hover {
 
   .avatar-wrapper {
     max-width: 260px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .projects-grid {
