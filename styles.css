@@ -314,12 +314,6 @@ header {
   color: var(--text-main);
 }
 
-.tag-accent {
-  background-color: rgba(16, 185, 129, 0.1);
-  border-color: rgba(16, 185, 129, 0.3);
-  color: var(--accent-green);
-}
-
 /* Terminal Card */
 .terminal-window {
   background-color: var(--code-bg);
@@ -417,12 +411,6 @@ header {
   font-weight: 700;
   color: var(--text-heading);
   letter-spacing: -0.01em;
-}
-
-.section-title::before {
-  content: "#";
-  color: var(--accent-green);
-  font-family: var(--font-mono);
 }
 
 .section-subtitle {
@@ -540,61 +528,41 @@ header {
 }
 
 /* Skills Section */
-.skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
-.skills-list-item {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
+.skill-group {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  transition: border-color 0.2s ease;
 }
 
-.skills-list-item:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
+.skill-group:hover {
+  border-color: var(--accent-green);
 }
 
-.skills-list-header {
+.skill-label {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-heading);
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.65rem;
 }
 
-.skills-list-header i {
-  color: var(--accent-green);
-}
-
-.skills-list-tags {
+.skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style-type: none;
-}
-
-.skill-pill {
-  font-family: var(--font-mono);
-  font-size: 0.825rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  transition: all 0.2s ease;
-}
-
-.skill-pill:hover {
-  border-color: var(--accent-green);
-  color: var(--accent-green);
+  gap: 0.4rem;
 }
 
 /* Projects Filter & Grid */
@@ -837,20 +805,19 @@ header {
 /* Certificates Grid */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .cert-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 1.1rem;
+  padding: 1.1rem 1.25rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  transition: all 0.2s ease;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
   text-decoration: none;
   color: var(--text-main);
 }
@@ -865,24 +832,36 @@ header {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-heading);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+  transition: color 0.2s ease;
 }
 
-.cert-issuer {
+.cert-card:hover .cert-info h4 {
+  color: var(--accent-green);
+}
+
+.cert-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
   font-size: 0.8rem;
   color: var(--text-muted);
   font-family: var(--font-mono);
 }
 
-.cert-badge {
-  font-size: 0.75rem;
-  font-family: var(--font-mono);
-  background-color: rgba(245, 158, 11, 0.15);
-  color: var(--accent-amber);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  white-space: nowrap;
+.cert-issuer {
+  color: var(--text-muted);
+}
+
+.cert-divider {
+  opacity: 0.4;
+}
+
+.cert-score {
+  color: var(--accent-green);
+  font-weight: 600;
 }
 
 /* Subsections */
@@ -898,25 +877,6 @@ header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.subsection-title::before {
-  content: "";
-  width: 3px;
-  height: 1.1rem;
-  background-color: var(--accent-green);
-  border-radius: 2px;
-}
-
-/* Certificates */
-.cert-card {
-  /* keep your existing styles */
-}
-
-.cert-badge.verified {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: var(--accent-green);
-  border-color: rgba(16, 185, 129, 0.3);
 }
 
 /* Published Papers Grid */
@@ -946,21 +906,6 @@ header {
   border-color: var(--accent-green);
   background-color: var(--bg-card-hover);
   transform: translateY(-2px);
-}
-
-/* Paper Icon */
-.paper-icon {
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background-color: rgba(16, 185, 129, 0.12);
-  color: var(--accent-green);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  font-size: 1.1rem;
 }
 
 /* Paper Information */
